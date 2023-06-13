@@ -66,7 +66,80 @@
       <h2>link 태그</h2>
     </header>
     <section>
-      <a href="https://www.w3schools.com/html/html_links.asp" tagret="_blank">HTML Link</a>
+      <!-- 절대경로 -->
+      <a href="https://www.naver.com" tagret="_blank">HTML Link</a>
+      <!-- 상대경로 -->
+      <a href="./01-layout.html">layout.html</a>
+      <a href="./images/01-01-daisy-w.jpeg">daisy image</a>
+      <a href="images/01-01-daisy-w.jpeg">daisy image222</a>
+      <a href="mailto:eehd10@naver.com">eehd10@naver.com</a>
+      <!-- 웹접근성 -->
+      <a href="https://www.naver.com" target="_blank" title="새창열림">네이버</a>
+      <a href="#main">main 바로가기</a>
+      <a href="./sub/sub.html#sec2">sub.html > id 값이 sec2 바로가기</a>
+    </section>
+
+    <header>
+      <h2>image 태그</h2>
+    </header>
+    <section>
+      <!-- 상대경로 -->
+      <!-- width, height 속성엔 단위 생략 -->
+      <img src="./images/01-01-daisy-w.jpeg" alt="daisy" width="200">
+      <img src="./images/01-01-daisy-w.jpeg" alt="daisy" style="width: 300px;">
+      <!-- 절대경로 -->
+      <a href="https://www.xexymix.com/shop/shopbrand.html?xcode=031&mcode=001&type=Y" target="_blank" title="새창열림">
+        <img src="https://ssl.pstatic.net/melona/libs/1445/1445972/f1d4db1a8c2b1b38815a_20230608164539325.jpg" alt="xexymix 젝시믹스 8주년 앵콜 + 무제한 쿠폰 젝시믹스 여름맞이 ~81% 기간한정 전상품 SALE" width="100%">
+      </a>
+
+      <!-- 반응형 이미지 -->
+      <picture>
+        <!-- width 650px 이상일 경우 -->
+        <source media="(min-width: 650px)" srcset="images\img_food.jpg">
+        <!-- width 465px 이상일 경우 -->
+        <source media="(min-width: 465px)" srcset="./images/img_car.jpg">
+        <img src="./images/img_girl.jpg" alt="뒷통수 아줌마" width="100%">
+      </picture>
+    </section>
+    
+    <header>
+     <h2>table 태그</h2>
+    </header>
+    <section>
+      <table>
+        <caption>테이블 설명 : 자세한 설명</caption>
+        <colgroup>
+          <col width="40%">
+          <col span="3">
+        </colgroup>
+        <thead>
+          
+        </thead>
+      </table>
+    </section>
+
+
+
+
+
+
+
+    <section id="nav">
+      <h2>Nav</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium enim tempora dolor sunt officiis atque animi exercitationem sit doloribus quisquam nemo consequuntur nesciunt, eum harum quo delectus architecto nisi.</p>
+    </section>
+    <section>
+      <h2>c1</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium enim tempora dolor sunt officiis atque animi exercitationem sit doloribus quisquam nemo consequuntur nesciunt, eum harum quo delectus architecto nisi.</p>
+    </section>
+    <section>
+      <h2>c1</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium enim tempora dolor sunt officiis atque animi exercitationem sit doloribus quisquam nemo consequuntur nesciunt, eum harum quo delectus architecto nisi.</p>
+    </section>
+    <section id="main">
+      <h2>Main</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium enim tempora dolor sunt officiis atque animi exercitationem sit doloribus quisquam nemo consequuntur nesciunt, eum harum quo delectus architecto nisi.</p>
+      <a href="#nav">nav 바로가기</a>
     </section>
   </div>
   <!-- 주석 태그 -->
