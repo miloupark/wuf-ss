@@ -111,13 +111,15 @@
         <caption>테이블 설명 : 자세한 설명</caption>
         <!-- 열의 가로 사이즈 -->
         <colgroup>
-          <col width="40%"> 
-          <col span="3"> <!-- span : 열의 갯수 -->
+          <!-- span : 열의 갯수 -->
+          <col> 
+          <col width="25%"> 
+          <col span="4" width="10%"> 
         </colgroup>
         <!-- 테이블의 구분 -->
         <thead>
           <tr>
-            <th scope="col" rowspan="2">과목</th>
+            <th scope="col" rowspan="2" colspan="2">과목</th>
             <th scope="col" colspan="4">1-1</th>
           </tr>
           <tr>
@@ -130,7 +132,7 @@
         <!-- 테이블의 본문 -->
         <tbody>
           <tr>
-            <th scope="row">국어</th>
+            <th scope="row" rowspan="3">공통</th>
             <th scope="row">국어</th>
             <td>100점</td>
             <td>100</td>
@@ -139,14 +141,12 @@
           </tr>
           <tr>
             <th scope="row">영어</th>
-            <th scope="row">영어</th>
             <td>90</td>
             <td>90</td>
             <td>90</td>
             <td>90</td>
           </tr>
           <tr>
-            <th scope="row">수학</th>
             <th scope="row">수학</th>
             <td>80</td>
             <td>80</td>
@@ -157,7 +157,7 @@
         <!-- 테이블의 요약 -->
         <tfoot>
           <tr>
-            <th scope="row">평균 점수</th>
+            <th scope="row" colspan="2">평균 점수</th>
             <td>90</td>
             <td>90</td>
             <td>90</td>
@@ -183,6 +183,44 @@
         background: #eee;
       }
     </style>
+
+    <head>
+      <h2>list 태그</h2>
+    </head>
+    <section>
+      <h3>좋아하는 동물</h3>
+      <!-- 순서 없는 목록 -->
+      <ul>
+        <li>강아지</li>
+        <li>댕댕이</li>
+        <li>갱얼쥐</li>
+      </ul>
+
+      <!-- 순서 있는 목록 -->
+      <ol>
+        <li>강아지</li>
+        <li>댕댕이</li>
+        <li>갱얼쥐</li>
+      </ol>
+
+      <!-- nav -->
+      <h3>메인메뉴</h3>
+      <!-- depth1 -->
+      <ul>
+        <li>
+          탑
+        </li>
+        <li>
+          아우터
+        </li>
+        <li>
+          팬츠
+        </li>
+        <li>
+          악세사리
+        </li>
+      </ul>
+    </section>
 
     <section id="nav">
       <h2>Nav</h2>
