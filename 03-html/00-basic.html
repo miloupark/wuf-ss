@@ -107,25 +107,89 @@
     </header>
     <section>
       <table>
+        <!-- 웹접근성 요건 추가 -->
         <caption>테이블 설명 : 자세한 설명</caption>
+        <!-- 열의 가로 사이즈 -->
         <colgroup>
-          <col width="40%">
-          <col span="3">
+          <col width="40%"> 
+          <col span="3"> <!-- span : 열의 갯수 -->
         </colgroup>
+        <!-- 테이블의 구분 -->
         <thead>
-          
+          <tr>
+            <th scope="col" rowspan="2">과목</th>
+            <th scope="col" colspan="4">1-1</th>
+          </tr>
+          <tr>
+            <th scope="col">짱구</th>
+            <th scope="col">맹구</th>
+            <th scope="col">철수</th>
+            <th scope="col">흰둥이</th>
+          </tr>
         </thead>
+        <!-- 테이블의 본문 -->
+        <tbody>
+          <tr>
+            <th scope="row">국어</th>
+            <th scope="row">국어</th>
+            <td>100점</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <th scope="row">영어</th>
+            <th scope="row">영어</th>
+            <td>90</td>
+            <td>90</td>
+            <td>90</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <th scope="row">수학</th>
+            <th scope="row">수학</th>
+            <td>80</td>
+            <td>80</td>
+            <td>80</td>
+            <td>80</td>
+          </tr>
+        </tbody>
+        <!-- 테이블의 요약 -->
+        <tfoot>
+          <tr>
+            <th scope="row">평균 점수</th>
+            <td>90</td>
+            <td>90</td>
+            <td>90</td>
+            <td>999</td>
+          </tr>
+        </tfoot>
       </table>
     </section>
-
-
-
-
-
-
+    <style>
+      table, tr, td, th {
+        border: 3px solid #eb9b06;
+      }
+      table {
+        width: 100%;
+      }
+      td {
+        height: 70px;
+      }
+      thead {
+        background: #ffd08b;
+      }
+      tfoot{
+        background: #eee;
+      }
+    </style>
 
     <section id="nav">
       <h2>Nav</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium enim tempora dolor sunt officiis atque animi exercitationem sit doloribus quisquam nemo consequuntur nesciunt, eum harum quo delectus architecto nisi.</p>
+    </section>
+    <section>
+      <h2>c1</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium enim tempora dolor sunt officiis atque animi exercitationem sit doloribus quisquam nemo consequuntur nesciunt, eum harum quo delectus architecto nisi.</p>
     </section>
     <section>
