@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상선택자 | css</title>
+    <style>
+      /* reset ulli bulletpoint 사라짐 */
+      * {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>가상선택자</h1>
+
+    <h2>순서</h2>
+    <ul class="lst-">
+      <li>menu 1</li>
+      <li>menu 2</li>
+      <li>menu 3</li>
+      <li>menu 4</li>
+    </ul>
+
+    <style>
+      .lst- {
+        border: 5px solid rgb(155, 255, 142);
+      }
+      .lst- li {
+        border: 5px solid #ffb3b3;
+        margin: 5px;
+      }
+      .lst- li:first-child {
+        background: rgb(223, 224, 255);
+      }
+      .lst- li:nth-child(2) {
+        background: rgb(193, 195, 255);
+      }
+      .lst- li:nth-child(3) {
+        background: rgb(140, 144, 255);
+      }
+      .lst- li:last-child {
+        background: rgb(72, 78, 255);
+      }
+      .lst- li:hover {
+        background: #000;
+        color: #fff;
+      }
+    </style>
+
+    <h2>링크 가상선택자</h2>
+    <a href="#">링크 가상선택자</a>
+    <style>
+      a {
+        font-size: 20px;
+        color: #000;
+      }
+      /* 안씀 */
+      /* a:link {} */
+      /* a:hover {
+        color: red;
+      } */
+      /* a:active {
+        color: green;
+      } */
+      /* a:visited {
+        color: blueviolet;
+      } */
+    </style>
+
+    <h2>가상 엘리먼트 선택자</h2>
+    <ul class="lst2">
+      <li><a href="#">공지항글</a></li>
+      <li><a href="#">공지항글</a></li>
+      <li><a href="#">공지항글</a></li>
+      <li><a href="#">공지항글</a></li>
+    </ul>
+    <style>
+      .lst2 li::before {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: rgb(62, 146, 255);
+        border-radius: 10px;
+        margin-right: 10px;
+      }
+      .lst2 li::after {
+        content: "뒤이다용";
+      }
+      .lst2 li {
+        color: rgba(255, 107, 9, 0.849);
+      }
+      .lst2 a {
+        color: red;
+      }
+      .lst2 a::before {
+        content: "before";
+      }
+      .lst2 a::after {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: #1100ff;
+      }
+    </style>
+
+    <ul class="lst3">
+      <li>menu 1</li>
+      <li>menu 2</li>
+      <li>menu 3</li>
+      <li>menu 4</li>
+    </ul>
+    <style>
+      /* menu 가로 정렬 */
+      .lst3 {
+        display: flex;
+      }
+      .lst3 li::after {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: #fd8726;
+        border-radius: 50%;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .lst3 li:last-child::after {
+        display: none;
+      }
+      .lst3::before {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 50px;
+        background: red;
+        margin-left: 10px;
+      }
+      .lst3::after {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 50px;
+        background: red;
+        margin-left: 10px;
+      }
+    </style>
+
+    <br /><br /><br /><br />
+  </body>
+</html>

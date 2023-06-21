@@ -5,10 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>선택자 | css</title>
   </head>
+
   <body>
     <h1>선택자</h1>
 
     <h2>태그 선택자</h2>
+
+    <div class="wrap">
+      wrap
+      <div class="util">util</div>
+      <header class="header">
+        header
+        <h1 class="logo">
+          <a href="#">logo</a>
+        </h1>
+        <nav class="gnb">nav</nav>
+      </header>
+    </div>
+    <style>
+      .wrap {
+        border: 5px solid rgb(255, 0, 0);
+        background: rgb(255, 0, 0);
+      }
+      .util {
+        background: rgba(251, 255, 0, 0.452);
+      }
+      .header {
+        border: 5px solid #ff2d6c;
+      }
+      .logo {
+        background: #000;
+      }
+      .logo a {
+        font-size: 18px;
+        color: white;
+      }
+      .gnb {
+        border: 5px solid rgba(0, 0, 255, 0.5);
+      }
+    </style>
+
+    <br /><br /><br />
     <div id="gnb">
       <ul class="depth1">
         <li class="fst">
@@ -72,7 +109,7 @@
         background: #f7f6d0;
       }
       ul.depth1 > li {
-        background: #839dd6;
+        background: #b3cbff;
       }
     </style>
   </body>
