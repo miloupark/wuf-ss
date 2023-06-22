@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>font | css</title>
+    <!-- 웹디자인기능사용 reset -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+        color: #222328;
+        /* text-decoration: none; */
+        list-style: none;
+        box-sizing: border-box;
+        /* 안전 글꼴 */
+        font-family: "Malgun Gothic", "맑은 고딕", helvetica,
+          "Apple SD Gothic Neo", sans-serif, "Gasoek One";
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>font</h1>
+
+    <h2>일반</h2>
+    <div class="font1">
+      <strong>타이틀</strong>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem aliquid
+        illum corrupti ut, error dicta maxime ex quidem quasi repellat qui
+        dolorem reprehenderit repudiandae veniam quaerat hic? Ullam, est nihil.
+      </p>
+      <!-- em태그 절대값 60px -->
+      <em>
+        기울어짐 <br />
+        <span>안기울어졌지롱</span>
+      </em>
+      <br />
+      <!-- b태그 상대값 60px( 기준 14px ) -->
+      <b>
+        기울어짐 <br />
+        <span>안기울어졌지롱</span>
+      </b>
+    </div>
+    <style>
+      h2 {
+        font-size: 60px;
+        font-family: Gasoek One;
+      }
+      .font1 strong {
+        font-family: "Orbit", sans-serif;
+        font-size: 40px;
+        font-weight: normal;
+      }
+      .font1 p {
+        font-family: "Lexend Peta", sans-serif;
+      }
+      .font1 em {
+        font-style: normal;
+        /* font-weight: bold; */
+        font-size: 60px;
+      }
+      .font1 em span {
+        /* font-size : 60px */
+        /* em은 엄마 태그를 기준으로 */
+        font-size: 1em;
+      }
+      .font1 b {
+        /* font-size : 60px */
+        font-size: 3.75em;
+      }
+      .font1 b span {
+        /* font-size : 16px */
+        /* rem html, body 태그 기준 */
+        font-size: 1rem;
+      }
+    </style>
+
+    <h2>font size</h2>
+
+    <strong>vw</strong>
+    <div class="vw">Responsive Text</div>
+    <div class="vh">Responsive Text</div>
+    <style>
+      .vw {
+        font-size: 17vw;
+        font-family: "Kablammo", cursive;
+      }
+      .vh {
+        font-size: 100vh;
+      }
+    </style>
+
+    <h2>text</h2>
+
+    <strong>vertical align</strong>
+    <div class="ver">
+      starstar <img src="./images/icon-star.jpg" alt="star" /> starstar
+    </div>
+    <style>
+      .ver {
+        font-size: 30px;
+        font-weight: bold;
+        font-family: "Lexend Peta", sans-serif;
+      }
+      .ver img {
+        vertical-align: middle;
+        margin-top: -30px;
+      }
+    </style>
+
+    <div class="ver2">
+      <img src="./images/icon-smile.jpg" alt="smile" /> smile우히히smile
+      <img src="./images/icon-smile.jpg" alt="smile" />
+    </div>
+    <style>
+      .ver2 {
+        font-size: 25px;
+        font-weight: normal;
+        font-family: "Lexend Peta", sans-serif;
+      }
+      .ver2 img {
+        vertical-align: middle;
+      }
+    </style>
+
+    <strong>decoration</strong>
+    <a href="#">글씨글씨 나능야 글씨글씨</a>
+    <style>
+      a {
+        text-decoration: none;
+        font-size: 30px;
+      }
+    </style>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+  </body>
+</html>
