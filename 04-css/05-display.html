@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>display | css</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        box-sizing: border-box;
+        text-decoration: none;
+        line-height: 1.5;
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>display</h1>
+
+    <h1>bolck(기본값)</h1>
+    <div class="box1">떡잎마을방범대</div>
+    <div class="box1">떡잎마을방범대</div>
+    <style>
+      .box1 {
+        width: 200px;
+        height: 100px;
+        background: #d1d8ff;
+      }
+    </style>
+
+    <h2>
+      inline(글자 한개) / inline-block(가로세로 값 가능, 글자처럼 옆으로 배치,
+      스페이스값도 들어감)
+    </h2>
+    <a href="#" class="box2">신형만</a>
+    <a href="#" class="box2">봉미선</a>
+    <a href="#" class="box2">짱구</a>
+    <style>
+      .box2 {
+        display: inline-block;
+        width: 100px;
+        height: 50px;
+        background: #ffaec0;
+        border: 1px solid #2d5a2b;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 50px;
+      }
+    </style>
+
+    <h2>none(컨텐츠 없앰)</h2>
+    <div class="box3">
+      <div>1짱구</div>
+      <div>2짱아</div>
+      <div>3흰둥이</div>
+    </div>
+    <style>
+      .box3 {
+        display: flex;
+      }
+      .box3 div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #78a7ff;
+        background: #ffe5ad;
+      }
+      .box3 div:first-child {
+        display: none;
+      }
+      .box3 div:nth-child(2) {
+        visibility: hidden;
+      }
+    </style>
+
+    <h2>flex</h2>
+    <div class="box-g box4">
+      <div>1철수</div>
+      <div>2유리</div>
+      <div>3맹구</div>
+      <div>3훈이</div>
+    </div>
+    <style>
+      /* 공통 클래스 */
+      .box-g {
+        margin-bottom: 30px;
+        padding: 20px;
+        background: #e4e4e4;
+      }
+      .box-g div {
+        width: 100px;
+        height: 100px;
+        background: #d8ffbe;
+        border: 1px solid #664c35;
+      }
+      .box4 {
+        display: flex;
+      }
+      .box4 div {
+        margin-right: 10px;
+      }
+      .box4 div:nth-child(4) {
+        margin-right: 0;
+      }
+    </style>
+
+    <div class="box-g box5">
+      <div>1못</div>
+      <div>2말</div>
+      <div>3려</div>
+    </div>
+    <style>
+      .box5 {
+        display: flex;
+        flex-direction: column; /* 세로방향 */
+        /* column, column-reverse, row, row-reverse */
+      }
+    </style>
+
+    <div class="box-g box6">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+    <style>
+      .box6 {
+        display: flex;
+        flex-wrap: wrap;
+        /* wrap 밑으로 떨어짐, nowrap 밑으로 안 떨어짐 */
+      }
+    </style>
+
+    <div class="box-g box7">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <style>
+      .box7 {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+
+    <div class="box-g box8">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <style>
+      .box8 {
+        display: flex;
+        justify-content: flex-start;
+      }
+    </style>
+
+    <div class="box-g box9">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <style>
+      .box9 {
+        display: flex;
+        justify-content: flex-end;
+      }
+    </style>
+
+    <div class="box-g box10">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <style>
+      .box10 {
+        display: flex;
+        justify-content: space-around;
+      }
+    </style>
+
+    <div class="box-g box11">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <style>
+      .box11 {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+
+    <div class="box-g box12">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <style>
+      .box12 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+      }
+    </style>
+
+    <h2>items</h2>
+    <div class="box-g box13">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <style>
+      .box13 {
+        display: flex;
+      }
+      .box13 div:first-child {
+        order: 2;
+      }
+      .box13 div:nth-child(2) {
+        order: 3;
+      }
+    </style>
+
+    <br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br />
+  </body>
+</html>
