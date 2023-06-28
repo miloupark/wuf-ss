@@ -80,9 +80,8 @@
 /* contents */
 .contents {
   display: flex;
-  height: 200px;
   justify-content: space-between;
-  padding: 10px 0px;
+  padding: 10px 0;
 }
 .tabs {
   width: 340px;
