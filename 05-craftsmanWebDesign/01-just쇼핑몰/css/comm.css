@@ -6,7 +6,6 @@
   box-sizing: border-box;
   text-decoration: none;
   line-height: 1.5;
-  /* 폰트 사이즈의 1.5 / 폰트 사이즈 안 넣었으니까 16px */
   color: #222328;
 }
 .wrap {
@@ -42,11 +41,11 @@
   text-align: center;
 }
 .gnb .depth1 > li > a:hover {
-  /* background: #4287c2; */
-  border-bottom: 3px solid #4287c2;
+  /* background: #e7b882; */
+  border-bottom: 5px solid #0060ff;
 }
+
 .gnb .depth1:hover .depth2 {
-  /* gnb에 depth1에 마우스오버했을때 depth2를 보이게 */
   display: block;
 }
 /* nav  depth2 */
@@ -58,10 +57,8 @@
 .gnb .depth2 a {
   display: block;
   height: 40px;
-  /* width: 100%; block요소의 기본 값이 100%이므로 안써도 됨*/
   text-align: center;
   line-height: 40px;
-  /* 높이값만큼 넣어주기 */
 }
 .gnb .depth2 a:hover {
   border-bottom: 3px solid #000;
@@ -84,7 +81,7 @@
   padding: 10px 0;
 }
 .tabs {
-  width: 340px;
+  width: calc(100% / 2 - 230px);
 }
 .bnr {
   width: 400px;
@@ -94,5 +91,22 @@
   display: block;
 }
 .goto {
-  width: 340px;
+  width: calc(100% / 2 - 230px);
+}
+.goto ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 180px;
+}
+.goto li {
+  width: calc(50% - 5px);
+  height: calc(50% - 5px);
+  background: #8d3a3a;
+}
+.goto a {
+  display: block;
+  height: 100%;
+  background: #ccd5ec;
 }
