@@ -206,3 +206,46 @@
   height: 100px;
   line-height: 100px;
 }
+
+/* modal */
+.modal-dimmed {
+  display: none;
+  /* display: flex하면 모달창 뜸-> js로! */
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  /* fixed 뷰포트(브라우저) 기준 */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+}
+.modal-box {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  padding: 30px;
+  border: 1px solid #000;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+}
+.modal-box h3 {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.modal-box button {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  width: 50px;
+  height: 50px;
+  background: #000;
+  border-radius: 50%;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
