@@ -28,6 +28,10 @@
 }
 .gnb .depth1 {
   display: flex;
+  position: relative;
+}
+.gnb .depth1 > li {
+  position: relative;
 }
 .gnb .depth1 > li > a {
   display: block;
@@ -42,15 +46,24 @@
   /* background: #e7b882; */
   border-bottom: 5px solid #0060ff;
 }
-
+.gnb .depth1 > li:last-child .depth2 {
+  border-right: 1px solid #000;
+}
 .gnb .depth1:hover .depth2 {
   display: block;
 }
 /* nav  depth2 */
 .gnb .depth2 {
-  display: none;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  /* display: none; */
   padding: 20px 0;
   background: #ffffff;
+  border: 1px solid #000;
+  border-right: none;
 }
 .gnb .depth2 a {
   display: block;
@@ -63,15 +76,20 @@
 }
 
 /* slide */
-.slide {
+.slide-wrap a,
+.slide-wrap img {
+  display: block;
+}
+.slide-wrap {
+  position: relative;
   overflow: hidden;
   height: 300px;
 }
-.slide a,
-.slide img {
-  display: block;
+.lst-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-
 /* contents */
 .contents {
   display: flex;
@@ -223,7 +241,6 @@
   background: rgba(0, 0, 0, 0.5);
 }
 .modal-box {
-  position: relative;
   width: 500px;
   height: 300px;
   padding: 30px;
