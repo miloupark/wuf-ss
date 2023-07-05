@@ -114,10 +114,33 @@
       }
       body {
         padding-top: 100px;
-        padding-bottom: 100px;
+        padding-bottom: 200px;
       }
       /* body에는 특수한 목적이 있는게 아니라면 이렇게 넣어주면 안됨 */
       /* fixed 글을 보이게 올려줌 */
+    </style>
+
+    <h2>가운데 정렬</h2>
+    <div class="box4">
+      <div class="item"></div>
+    </div>
+    <style>
+      .box4 {
+        position: relative;
+        height: 500px;
+        background: #a3d6ff;
+      }
+      .box4 .item {
+        position: absolute;
+        /* 하늘에 띄우고 싶은 친구를 absolute */
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        margin-left: -100px;
+        margin-top: -100px;
+        background: #ffd0c8;
+      }
     </style>
   </body>
 </html>
