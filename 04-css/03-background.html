@@ -18,17 +18,137 @@
   </head>
   <body>
     <h1>background</h1>
-    <strong>background-color</strong>
+    <h2>background-color</h2>
     <div class="bg1">background-color</div>
     <style>
       body {
-        background-color: rgba(0, 102, 255, 0.2);
+        background-color: rgba(0, 255, 179, 0.2);
       }
       .bg1 {
         width: 100%;
         height: 100px;
-        background-color: rgb(255, 250, 205);
+        background-color: rgb(255, 116, 158);
       }
     </style>
+
+    <h2>background-attachment</h2>
+    <div class="box2"></div>
+    <style>
+      .box2 {
+        height: 300px;
+        background-image: url("https://images.unsplash.com/photo-1687507593516-abd148e0bac9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+        background-attachment: fixed;
+        background-size: 100% auto;
+        /* bgz: 가로 세로 (가로100%, 세로: 100%들어간 만큼 자동으로 세로 축 넣어줘=auto) */
+        /* 이미지를 손상시키지 않기 위해 대부분 가로값 세로값 중 하나는 auto */
+      }
+    </style>
+
+    <h2>background-image</h2>
+    <div class="box1"></div>
+    <style>
+      .box1 {
+        height: 200vh;
+        border: 10px solid #000;
+        background-color: #fff;
+        background-image: url("https://avatars.githubusercontent.com/u/10627436?v=4");
+        background-repeat: no-repeat;
+        /* repeat-x : repeat-y : */
+        background-position: 50% 0;
+        background-size: 200px auto;
+        /* background-attachment: fixed;
+        웹사이트 뒷배경 크게 넣고 박스는 고정되게하는 페이지에 사용? */
+      }
+    </style>
+
+    <h2>background-size</h2>
+    <div class="box box3"></div>
+    <br />
+    <div class="box box4"></div>
+    <style>
+      .box {
+        width: 800px;
+        height: 300px;
+        border: 10px solid #000;
+        background-image: url("https://avatars.githubusercontent.com/u/10627436?v=4");
+        background-repeat: no-repeat;
+      }
+      .box3 {
+        background-size: contain;
+        /* logo, icon : 잘리면 안되는 이미지 */
+      }
+      .box4 {
+        background-size: cover;
+        /* 배경 이미지 : 박스를 채우는 이미지 */
+        background-position: 0 -180px;
+        /* bgz : topbottom / rightleft */
+      }
+    </style>
+
+    <h2>Sprite</h2>
+
+    <div class="wrap">
+      <div class="img-g sprite1"></div>
+      <div class="img-g sprite2"></div>
+      <div class="img-g sprite3"></div>
+      <div class="img-g sprite4"></div>
+    </div>
+    <style>
+      .wrap {
+        display: flex;
+      }
+
+      .img-g {
+        margin-right: 20px;
+        background-image: url("./images/sprite-img.png");
+        background-repeat: no-repeat;
+      }
+
+      .sprite1 {
+        width: 134px;
+        height: 132px;
+        background-position: 0 0;
+      }
+
+      .sprite2 {
+        width: 40px;
+        height: 38px;
+        background-position: -140px 0;
+      }
+
+      .sprite3 {
+        width: 40px;
+        height: 40px;
+        background-position: -140px -40px;
+      }
+      /* 공통클래스 img-g에 sprite1,2,3에서 반복되는 태그를 넣어줌 */
+      /* bgposition의 가로 세로값은 포토샵png파일열어서 확인  */
+      .sprite3:hover {
+        background-position: -140px -300px;
+      }
+      /* sprite3에 마우스오버했을때 다른이미지(아이콘png의 포지션 값을 넣어줌) 나오게 함 */
+
+      .sprite4 {
+        width: 30px;
+        height: 30px;
+        background-position: -200px 0;
+        cursor: pointer;
+        /* icon에 cursor을 대면 손가락 pointers로 바뀜 */
+      }
+
+      .sprite4:hover {
+        background-position: -240px 0;
+      }
+
+      .sprit4:active {
+        background-position: -280px 0;
+      }
+
+      .sprite:visited {
+        background-position: -320px 0;
+      }
+    </style>
+
+    <br />
   </body>
 </html>
