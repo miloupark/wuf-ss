@@ -227,9 +227,90 @@
       .box13 div:first-child {
         order: 3;
       }
-      .box13 div:nth-child(2) { 
+      .box13 div:nth-child(2) {
         order: 3;
       }
+    </style>
+
+    <h2>flex-grow</h2>
+    <!-- .box-g.box14 + tab (class값 두 개 같이 들어감)-->
+    <div class="box-g box14">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <style>
+      .box14 {
+        display: flex;
+      }
+      .box14 div {
+        width: auto;
+        /* width를 100px 물려받고있기 때문에 width의 default 값인 auto를 넣어줌 */
+      }
+      .box14 div:nth-child(1) {
+        flex-grow: 1;
+      }
+      .box14 div:nth-child(2) {
+        flex-grow: 1;
+      }
+      .box14 div:nth-child(3) {
+        flex-grow: 2;
+      }
+    </style>
+
+    <h2>flex-shrink</h2>
+    <div class="box-g box15">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+    <style>
+      .box15 {
+        display: flex;
+        /* flex는 자식말고 무조건 엄마한테 넣어줘야함 */
+      }
+      .box15 div:nth-child(7) {
+        flex-shrink: 0;
+        /* shrink 다른 플렉스 항목만큼 줄어들지 않도록 */
+      }
+    </style>
+
+    <h2>flex-basis</h2>
+    <div class="box-g box16">
+      <div>가</div>
+      <div>가나</div>
+      <div>가나다라</div>
+    </div>
+
+    <style>
+      .box16 {
+        display: flex;
+      }
+      .box16 div {
+        flex-basis: 0;
+        /* 1:1:2 비율로 나누고 싶은데..
+        flex-basis: auto; (기본값) 글자의 갯수만큼 가로사이즈가 늘어남 (div에서 텍스트를 뺀 여백의 비율로 적용됨)
+        flex-basis: 0; 글자 갯수 상관없이 div 비율대로 배치*/
+        width: auto;
+        text-align: center;
+      }
+      .box16 div:nth-child(-n + 2) {
+        /* 같은 요소중 1번재부터 3번째까지 요소 */
+        flex-grow: 1;
+      }
+      .box16 div:last-child {
+        flex-grow: 3;
+      }
+      /* div 가, 가나:비율1 / 가나다라:비율3  */
     </style>
 
     <br /><br /><br /><br /><br />
