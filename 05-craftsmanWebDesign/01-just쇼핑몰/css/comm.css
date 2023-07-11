@@ -52,9 +52,9 @@
 /* gnb 마우스 오버 후  */
 .gnb .depth1:hover .depth2 {
   display: block;
-  height: 160px;
+  max-height: 300px;
   /* padding: 10px 0; */
-  border-width: 1px;
+  border-bottom-width: 1px;
 }
 /* nav  depth2 */
 /* gnb 마우스 오버 전  */
@@ -66,12 +66,27 @@
   right: 0;
   z-index: 1000;
   overflow: hidden;
-  height: 0;
+  max-height: 0;
   /* padding: 0; */
   background: #ffffff;
-  border: 0px solid #b8b8b8;
+  border-bottom: 0px solid #b8b8b8;
   border-right: none;
   transition: all 0.3s;
+}
+/* 가상공간을 만들어서 depth2에 구분선을 넣어줌 */
+.gnb .depth2::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 0;
+  bottom: 5px;
+  width: 1px;
+  background: rgba(0, 0, 0, 0.5);
+  /* 구분선은 블랙으로 설정하고 a로 조절해줌 회바회  */
+}
+/* li 악세사리의 우측 선 없애줌 */
+.gnb .depth1 > li:last-child .depth2::after {
+  display: none;
 }
 .gnb .depth2 a {
   display: block;
