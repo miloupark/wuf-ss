@@ -56,6 +56,7 @@
   /* padding: 10px 0; */
   border-bottom-width: 1px;
 }
+
 /* nav  depth2 */
 /* gnb 마우스 오버 전  */
 .gnb .depth2 {
@@ -73,6 +74,7 @@
   border-right: none;
   transition: all 0.3s;
 }
+
 /* 가상공간을 만들어서 depth2에 구분선을 넣어줌 */
 .gnb .depth2::after {
   content: "";
@@ -84,7 +86,8 @@
   background: rgba(0, 0, 0, 0.5);
   /* 구분선은 블랙으로 설정하고 a로 조절해줌 회바회  */
 }
-/* li 악세사리의 우측 선 없애줌 */
+
+/* li 악세사리의 우측 border 없애줌 */
 .gnb .depth1 > li:last-child .depth2::after {
   display: none;
 }
