@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>etc | css</title>
+  </head>
+  <body>
+    <h1>tooltip</h1>
+    <div class="tooltip-wrap">
+      tooptip 보기
+      <div class="tooltip-item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </div>
+      <div class="tooltip-item2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </div>
+    </div>
+    <style>
+      .tooltip-wrap {
+        display: inline-block;
+        position: relative;
+        margin: 100px;
+        top: 0;
+        left: 0;
+        font-weight: bold;
+        font-size: 20px;
+        color: #ff0055;
+        background: #e7e7e7;
+      }
+      .tooltip-item {
+        position: absolute;
+        top: 50%;
+        right: -130px;
+        display: inline-block;
+        /* 텍스트만큼만 배경 넣어주기 -> display: inline or inline-flex */
+        max-width: 100px;
+        /* block 100px */
+        padding: 5px 10px;
+        font-size: 12px;
+        font-weight: normal;
+        color: #333;
+        background: #00ff80;
+        border-radius: 5px;
+        /* word-break: break-all; */
+        transform: translateY(-50%);
+        /* top을 50%로 하고 translateY를 -50% */
+      }
+      .tooltip-item2 {
+        position: absolute;
+        bottom: -140px;
+        left: 50%;
+        display: inline-block;
+        /* 텍스트만큼만 배경 넣어주기 -> display: inline or inline-flex */
+        max-width: 100px;
+        /* block 100px */
+        padding: 5px 10px;
+        font-size: 12px;
+        font-weight: normal;
+        color: #333;
+        background: #00ff80;
+        border-radius: 5px;
+        /* word-break: break-all; */
+        transform: translate(-50%);
+      }
+    </style>
+  </body>
+</html>
