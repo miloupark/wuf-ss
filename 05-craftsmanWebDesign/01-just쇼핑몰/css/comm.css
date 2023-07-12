@@ -111,13 +111,37 @@
 .slide-wrap {
   position: relative;
   overflow: hidden;
+  /* 슬라이드 숨김 */
   height: 300px;
 }
 .lst-slide {
   position: absolute;
   top: 0;
   left: 0;
+  animation: slide-ani 9s linear alternate infinite;
+  /* animation: 슬라이드이름; 몇 초; value값들*/
 }
+@keyframes slide-ani {
+  0% {
+    top: 0;
+  }
+  30% {
+    top: 0;
+  }
+  37% {
+    top: -300px;
+  }
+  70% {
+    top: -300px;
+  }
+  73% {
+    top: -600px;
+  }
+  100% {
+    top: -600px;
+  }
+}
+
 /* contents */
 .contents {
   display: flex;
