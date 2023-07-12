@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation | css</title>
+  </head>
+
+  <body>
+    <h1>Animation</h1>
+    <div class="box1">
+      <div class="ani"></div>
+    </div>
+
+    <style>
+      .box1 {
+        position: relative;
+        height: 500px;
+        background: #e2e2e2;
+      }
+      .ani {
+        /* position top, left 셋이 항상 같이 다님 */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        background: #73ffbe;
+        /* bg는 꼭 있어야함 */
+        animation-name: ani-box;
+        animation-duration: 4s;
+        /* ani-name, duration 같이 넣어줘야함 */
+        animation-delay: 2s;
+        /* 2초 지난 뒤 시작 */
+        animation-iteration-count: infinite;
+        /* infinite 대신 3;입력하면 3번 반복 */
+        animation-direction: reverse;
+        /* 애니메이션 반대로 진행됨 */
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+      }
+      @keyframes ani-box {
+        0% {
+          background-color: #73ffbe;
+          top: 0;
+          left: 0;
+          /* 왼쪽상단 */
+        }
+        25% {
+          background: rgb(0, 140, 255);
+          top: 0;
+          left: calc(100% - 200px);
+        }
+        50% {
+          background: #ff4800;
+          top: 300px;
+          left: 700px;
+        }
+        75% {
+          background: #ff276f;
+          top: 300px;
+          left: 0;
+        }
+        100% {
+          background: #000;
+          top: 0;
+          left: 0;
+        }
+      }
+    </style>
+
+    <h2>animation-2</h2>
+    <div class="box2">
+      <div class="circle"></div>
+      <div class="circle2"></div>
+      <div class="square"></div>
+    </div>
+    <style>
+      .box2 {
+        position: relative;
+        height: 400px;
+        background: #000;
+      }
+      .circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: #afcbff;
+        animation-name: ani-circle;
+        animation-duration: 3s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+      }
+      .circle2 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: #afcbff;
+        animation-name: ani-circle2;
+        animation-duration: 3s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+      }
+      .square {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        background: #00ffc8;
+        animation-name: ani-square;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+      }
+      @keyframes ani-circle {
+        0% {
+          background: #afcbff;
+        }
+        50% {
+          background: rgba(255, 10, 112, 0.5);
+          /* align-items: center; */
+          top: 200px;
+          left: 200px;
+        }
+      }
+      @keyframes ani-circle2 {
+        0% {
+          background: #afcbff;
+        }
+        50% {
+          background: rgba(0, 140, 255, 0.5);
+          top: 200px;
+          right: 200px;
+        }
+      }
+      @keyframes ani-square {
+        0% {
+          opacity: 0;
+          top: 0;
+          left: 0;
+        }
+        50% {
+          opacity: 0.7;
+          top: 200px;
+          right: 200px;
+        }
+      }
+    </style>
+  </body>
+</html>
