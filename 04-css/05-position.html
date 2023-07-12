@@ -139,7 +139,32 @@
         height: 200px;
         margin-left: -100px;
         margin-top: -100px;
-        background: #ffd0c8;
+        /* margin 조금 옛날 방법 */
+        background: #ff3075;
+      }
+    </style>
+
+    <h2>가운데 정렬 : transform</h2>
+    <div class="box5">
+      <div class="item"></div>
+    </div>
+
+    <style>
+      .box5 {
+        position: relative;
+        height: 500px;
+        background: #474747;
+      }
+      .box5 .item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /* top 50%, left 50% 가운데 정렬 but, transform으로 50%씩 당겨줘야함  */
+        width: 200px;
+        height: 200px;
+        /* width, height %로 넣어줘도 됨 */
+        background: #00ff9d;
+        transform: translate(-50%, -50%);
       }
     </style>
   </body>
