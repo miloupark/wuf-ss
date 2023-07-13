@@ -119,14 +119,15 @@
     </style>
 
     <h2>image style</h2>
-    <div class="image">
+    <div class="image1">
       <img
         src="https://images.unsplash.com/photo-1687441477919-dc6b4560b318?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
         alt="jump"
       />
+      <!-- 운영요소(배너, 쇼핑몰 상품img, 기사img)일때만 img태그로 넣기 -->
     </div>
     <style>
-      .image img {
+      .image1 img {
         width: 500px;
         height: 300px;
         object-fit: cover;
@@ -140,6 +141,24 @@
         border: 5px solid rgb(55, 255, 172);
         filter: grayscale(100%);
         /* 이미지 흑백으로 만들기 */
+      }
+    </style>
+
+    <h2>mask</h2>
+    <div class="image2"></div>
+    <style>
+      .image2 {
+        height: 700px;
+        /* h높이값을 안 넣어주면 이미지가 안 보임 */
+        -webkit-mask-image: url(./images/w3logo.png);
+        mask-image: url(./images/w3logo.png);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        background: url(https://images.unsplash.com/photo-1671287214909-96cdf175c9a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE3NHxpVUlzblZ0akIwWXx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60)
+          no-repeat 0px 0px;
+        /* bg이미지가 너무 커서 안 보일때는 background-size: cover or contain + 위치값 넣어주기
+        / background: url(https://images.unsplash.com/photo-1671287214909-96cdf175c9a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE3NHxpVUlzblZ0akIwWXx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60)
+          no-repeat 0 0 / cover; */
       }
     </style>
   </body>
