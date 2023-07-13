@@ -4,64 +4,142 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>etc | css</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        box-sizing: border-box;
+        line-height: 1.5;
+        color: #000;
+      }
+    </style>
   </head>
+
   <body>
     <h1>tooltip</h1>
     <div class="tooltip-wrap">
-      tooptip 보기
-      <div class="tooltip-item">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </div>
-      <div class="tooltip-item2">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </div>
+      tooltip 보기 <br />
+      tooltip 보기 <br />
+      tooltip 보기
+      <div class="item top">TOP</div>
+      <div class="item bottom">BOTTOM</div>
+      <div class="item left">LEFT</div>
+      <div class="item right">RIGHT</div>
     </div>
+
     <style>
+      /* arrow */
+      .item::after {
+        content: "";
+        position: absolute;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #b922ff transparent transparent transparent;
+      }
+      .bottom::after {
+        top: -10px;
+        left: 50%;
+        transform: rotate(180deg) translateX(50%);
+      }
+      .right::after {
+        top: 50%;
+        left: -10px;
+        transform: rotate(90deg) translateX(-50%);
+      }
+      .left::after {
+        top: 50%;
+        right: -10px;
+        transform: rotate(-90deg) translateX(50%);
+      }
+      .top::after {
+        bottom: -10px;
+        /* 가상공간을 만들어줌으로써 화살표만들기 */
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .right {
+        position: absolute;
+        top: 50%;
+        right: -60px;
+        transform: translateY(-50%);
+        /* = margin-top: -12px; */
+      }
+      .left {
+        position: absolute;
+        top: 50%;
+        left: -60px;
+        margin-top: -12px;
+      }
+      .bottom {
+        position: absolute;
+        bottom: -35px;
+        left: 50%;
+        transform: translateX(-50%);
+        /* 가운데정렬 시 transform & margin- 두가지 방법 */
+      }
+      .top {
+        position: absolute;
+        top: -35px;
+        /* -마이너스로 넣어주면 올라감 */
+        left: 50%;
+        margin-left: -25px; /* .item width 50px이니까 반인 25px 당김 */
+        /* 가운데정렬 시 transform & margin- 두가지 방법 */
+      }
       .tooltip-wrap {
         display: inline-block;
         position: relative;
         margin: 100px;
-        top: 0;
-        left: 0;
+        padding: 5px 5px;
         font-weight: bold;
         font-size: 20px;
-        color: #ff0055;
-        background: #e7e7e7;
+        color: #ffb0ca;
+        background: #502b00;
+        border-radius: 5px;
       }
-      .tooltip-item {
-        position: absolute;
-        top: 50%;
-        right: -130px;
+      .item {
         display: inline-block;
         /* 텍스트만큼만 배경 넣어주기 -> display: inline or inline-flex */
-        max-width: 100px;
-        /* block 100px */
-        padding: 5px 10px;
+        width: 50px;
+        padding: 5px 0;
         font-size: 12px;
         font-weight: normal;
-        color: #333;
-        background: #00ff80;
+        color: #fff;
+        background: #b922ff;
         border-radius: 5px;
+        text-align: center;
+        box-sizing: border-box;
+        /* opacity: 0.5; */
         /* word-break: break-all; */
-        transform: translateY(-50%);
+        /* transform: translateY(-50%); */
         /* top을 50%로 하고 translateY를 -50% */
       }
-      .tooltip-item2 {
-        position: absolute;
-        bottom: -140px;
-        left: 50%;
-        display: inline-block;
-        /* 텍스트만큼만 배경 넣어주기 -> display: inline or inline-flex */
-        max-width: 100px;
-        /* block 100px */
-        padding: 5px 10px;
-        font-size: 12px;
-        font-weight: normal;
-        color: #333;
-        background: #00ff80;
-        border-radius: 5px;
-        /* word-break: break-all; */
-        transform: translate(-50%);
+    </style>
+
+    <h2>image style</h2>
+    <div class="image">
+      <img
+        src="https://images.unsplash.com/photo-1687441477919-dc6b4560b318?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+        alt="jump"
+      />
+    </div>
+    <style>
+      .image img {
+        width: 500px;
+        height: 300px;
+        object-fit: cover;
+        /* 500px*300px 안에 이미지 잘 넣어짐 */
+        /* object-fit: contain; -> 500px*300px 안에 여백 생기면서 이미지 그대로 들어감 */
+        object-position: 50% 60%;
+        /* 500px*300px 안에 이미지 위치 조정 */
+        max-width: 100%;
+        padding: 5px;
+        border-radius: 20px;
+        border: 5px solid rgb(55, 255, 172);
+        filter: grayscale(100%);
+        /* 이미지 흑백으로 만들기 */
       }
     </style>
   </body>
