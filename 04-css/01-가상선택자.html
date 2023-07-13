@@ -27,20 +27,20 @@
         border: 5px solid rgb(155, 255, 142);
       }
       .lst- li {
-        border: 5px solid #ffb3b3;
+        border: 5px solid #b6b6b6;
         margin: 5px;
       }
       .lst- li:first-child {
-        background: rgb(223, 224, 255);
+        background: rgb(218, 72, 255);
       }
       .lst- li:nth-child(2) {
-        background: rgb(193, 195, 255);
+        background: rgb(97, 27, 0);
       }
       .lst- li:nth-child(3) {
-        background: rgb(140, 144, 255);
+        background: rgb(122, 184, 255);
       }
       .lst- li:last-child {
-        background: rgb(72, 78, 255);
+        background: rgb(255, 234, 167);
       }
       .lst- li:hover {
         background: #000;
@@ -145,6 +145,27 @@
         height: 50px;
         background: red;
         margin-left: 10px;
+      }
+    </style>
+
+    <h2>button disabled</h2>
+    <input type="button" value="비활성화" disabled />
+    <style>
+      .button {
+        background-color: #4caf50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+      .button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
       }
     </style>
 
