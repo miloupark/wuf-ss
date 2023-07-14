@@ -1,4 +1,20 @@
 @charset "UTF-8";
+/* 변수 */
+:root {
+  /* 주조색 */
+  --primary: #0060ff;
+  /* 라인 컬러 */
+  --line: #b8b8b8;
+  /* 텍스트 컬러 */
+  --txt: #222328;
+  --w: #fff;
+  --b: #111;
+
+  /* 사이즈 */
+  --widthWrap: 1200px;
+  --slideHeight: 300px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +22,12 @@
   box-sizing: border-box;
   text-decoration: none;
   line-height: 1.5;
-  color: #222328;
+  color: var(--txt);
+  /* 변수 적용 */
 }
 .wrap {
-  width: 1200px;
+  /* 변수 적용 */
+  width: var(--widthWrap);
   margin: 0 auto;
 }
 .header {
@@ -44,10 +62,10 @@
 }
 .gnb .depth1 > li:hover > a {
   /* background: #e7b882; */
-  border-bottom: 5px solid #0060ff;
+  border-bottom: 5px solid var(--primary);
 }
 .gnb .depth1 > li:last-child .depth2 {
-  border-right: 1px solid #000;
+  border-right: 1px solid var(--b);
 }
 /* gnb 마우스 오버 후  */
 .gnb .depth1:hover .depth2 {
@@ -83,7 +101,7 @@
   right: 0;
   bottom: 5px;
   width: 1px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.1);
   /* 구분선은 블랙으로 설정하고 a로 조절해줌 회바회  */
 }
 
@@ -99,7 +117,7 @@
 }
 .gnb .depth2 a:hover {
   /* border-bottom: 3px solid #000; */
-  background: #0060ff;
+  background: var(--primary);
   color: #fff;
 }
 
@@ -112,7 +130,7 @@
   position: relative;
   overflow: hidden;
   /* 슬라이드 숨김 */
-  height: 300px;
+  height: var(--slideHeight);
 }
 .lst-slide {
   position: absolute;
