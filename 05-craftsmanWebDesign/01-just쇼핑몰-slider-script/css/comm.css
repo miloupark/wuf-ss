@@ -136,7 +136,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  /* animation: slide-ani 9s linear alternate infinite; */
+  animation: slide-ani 9s linear alternate infinite;
   /* animation: 슬라이드이름; 몇 초; value값들*/
 }
 @keyframes slide-ani {
