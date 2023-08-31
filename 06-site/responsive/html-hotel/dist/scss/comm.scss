@@ -1,0 +1,96 @@
+@charset "UFT-8";
+@import "variables", "mixin", "reset", "main", "contents";
+// variables 변수가 가장 맨 앞, 선언 후 변수 사용해야함
+
+// comm.css -
+// 공통요소 : 헤더, 풋터, 버튼, 아이콘, 박스
+
+// 공통
+// 이 페이지에서만 사용하는 변수 설정
+$hdWidth: 200px;
+// variables에서는 전체페이지 다 공통으로 사용하는 변수
+
+.wrap {
+  display: flex;
+  height: 100vh;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  width: $hdWidth;
+  padding: 40px;
+  background-color: $w;
+  #logo {
+    a {
+      display: block;
+      width: 150px;
+      height: 116px;
+      margin: 0 auto;
+      background: url(../../images/logo1.png) 00 / contain no-repeat;
+      text-indent: -9999px;
+    }
+}
+}
+#gnb {
+  width: 100px;
+  margin: 184px auto 0;
+  .depth1 {
+    display: block;
+    .depth1-li {
+      padding: 8px;
+    }
+  }
+}
+.main-spot {
+  margin-top: auto;
+}
+.main-spot-g {
+  display: flex;
+  justify-content: center;
+  .main-spot-g a {
+    display: block;
+    padding: 10px;
+  }
+}
+.contact {
+  a {
+    position: relative;;
+    font-size: 12px;
+    &::before {
+      content: "";
+      @include posY;
+      // position: absolute;
+      // top: 50%;
+      // transform: translateY(-50%);
+      left: 0;
+      width: 1px;
+      height: 10px;
+      background-color: #333;
+    }
+    &:first-child::before {
+      display: none;
+    }
+  }
+}
+.sns {
+  a {
+    display: block;
+    width: 31px;
+    height: 29px;
+  }
+  .facebook {
+    background: url(../../images/sns3.png) 0 0 no-repeat;
+  }
+  .twitter {
+    background: url(../../images/sns4.png) 0 0 no-repeat;
+  }
+  .instagram {
+    background: url(../../images/sns5.png) 0 0 no-repeat;
+  }
+}
+
+
+.main {
+  width: calc(100% - $hdWidth);
+  background-color: #999;
+}
