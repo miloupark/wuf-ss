@@ -8,10 +8,12 @@
 // 공통
 // 이 페이지에서만 사용하는 변수 설정
 $hdWidth: 200px;
+$utilHeight: 40px;
 // variables에서는 전체페이지 다 공통으로 사용하는 변수
 
 .wrap {
   display: flex;
+  position: relative;
   height: 100vh;
 }
 .header {
@@ -89,8 +91,131 @@ $hdWidth: 200px;
   }
 }
 
-
+.main-util {
+  position: absolute;
+  top: 0;
+  left: $hdWidth;
+  right: 0;
+  height: $utilHeight;
+  background-color: #333;
+}
 .main {
   width: calc(100% - $hdWidth);
+  padding-top: $utilHeight;
   background-color: #999;
 }
+.grid {
+  display: grid;
+  // grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
+  // 5번을 반복 1fr
+  // = grid-template-columns: auto auto auto auto auto;
+  // columns의 auto는 나머지 값 / row의 auto는 기본
+  grid-template-rows: repeat(4, 1fr);
+  height: calc(100vh - $utilHeight);
+}
+.box-g {
+  position: relative;
+  height: 100%;
+  background-color: greenyellow;
+  overflow: hidden;
+  strong {
+    text-transform: capitalize;
+  }
+  .box-1__tit {
+    position: absolute;
+    bottom: -32px;
+    right: -1px;
+    font-size: 100px;
+    font-weight: 900;
+    color: rgba(white, 0.7);
+    letter-spacing: -3px;
+  }
+}
+.box-1 {
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 2;
+  background: url(../../images/pic1.jpg) 50% 50% / cover no-repeat;
+}
+.box-2 {
+  background-color: darkmagenta;
+  grid-column: 4 / span 2;
+}
+.box-3 {
+  background: rgba($prim1, 0.9);
+  &::after {
+    content: "\f2f9";
+    position: absolute;
+    top: 0;
+    bottom: -39px;
+    right: -9px;
+    font-size: 120px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: rgba(white, .7);
+    animation: fa-spin 2s infinite linear;
+    transform: rotate(360deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.box-4 {
+  background: rgba($prim1, 0.9);
+}
+.box-5 {
+  background: rgba($prim1, 0.9);
+}
+.box-6 {
+  grid-column: 2 / span 2;
+  background: saddlebrown;
+}
+.box-7 {
+  background: rgba($prim1, 0.9);
+}
+.box-8 {
+  background: rgba($prim1, 0.9);
+}
+.box-9 {
+  grid-column: 1 / span 2;
+  background: dodgerblue;
+}
+.box-10 {
+  background: rgba($prim1, 0.9);
+}
+.box-11 {
+  grid-column: 4 / span 2;
+  background: rgba($prim1, 0.9);
+}
+.box-12 {
+  background: rgba($prim1, 0.9);
+}
+// .box-13 {
+//   background: rgba($prim1, 0.8);
+// }
+// .box-14 {
+//   background: rgba($prim1, 0.7);
+// }
+// .box-15 {
+//   background: rgba($prim1, 0.6);
+// }
+// .box-16 {
+//   background: rgba($prim1, 0.5);
+// }
+// .box-17 {
+//   background: rgba($prim1, 0.4);
+// }
+// .box-18 {
+//   background: rgba($prim1, 0.3);
+// }
+// .box-19 {
+//   background: rgba($prim1, 0.2);
+// }
+// .box-20 {
+//   background: rgba($prim1, 0.1);
+// }

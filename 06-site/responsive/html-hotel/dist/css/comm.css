@@ -255,11 +255,6 @@ legend {
   content: "";
 }
 
-body {
-  background: url(/1-1599이상.jpg) 0 0 no-repeat;
-  opacity: 0.4;
-}
-
 .slide-intro {
   transform: translateY(-70px);
 }
@@ -317,6 +312,7 @@ body {
 
 .wrap {
   display: flex;
+  position: relative;
   height: 100vh;
 }
 
@@ -393,7 +389,118 @@ body {
   background: url(../../images/sns5.png) 0 0 no-repeat;
 }
 
+.main-util {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  right: 0;
+  height: 40px;
+  background-color: #333;
+}
+
 .main {
   width: calc(100% - 200px);
+  padding-top: 40px;
   background-color: #999;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  height: calc(100vh - 40px);
+}
+
+.box-g {
+  position: relative;
+  height: 100%;
+  background-color: greenyellow;
+  overflow: hidden;
+}
+.box-g strong {
+  text-transform: capitalize;
+}
+.box-g .box-1__tit {
+  position: absolute;
+  bottom: -32px;
+  right: -1px;
+  font-size: 100px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: -3px;
+}
+
+.box-1 {
+  grid-column: 1/span 3;
+  grid-row: 1/span 2;
+  background: url(../../images/pic1.jpg) 50% 50%/cover no-repeat;
+}
+
+.box-2 {
+  background-color: darkmagenta;
+  grid-column: 4/span 2;
+}
+
+.box-3 {
+  background: rgba(255, 202, 0, 0.9);
+}
+.box-3::after {
+  content: "\f2f9";
+  position: absolute;
+  top: 0;
+  bottom: -39px;
+  right: -9px;
+  font-size: 120px;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.7);
+  animation: fa-spin 2s infinite linear;
+  transform: rotate(360deg);
+}
+
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.box-4 {
+  background: rgba(255, 202, 0, 0.9);
+}
+
+.box-5 {
+  background: rgba(255, 202, 0, 0.9);
+}
+
+.box-6 {
+  grid-column: 2/span 2;
+  background: saddlebrown;
+}
+
+.box-7 {
+  background: rgba(255, 202, 0, 0.9);
+}
+
+.box-8 {
+  background: rgba(255, 202, 0, 0.9);
+}
+
+.box-9 {
+  grid-column: 1/span 2;
+  background: dodgerblue;
+}
+
+.box-10 {
+  background: rgba(255, 202, 0, 0.9);
+}
+
+.box-11 {
+  grid-column: 4/span 2;
+  background: rgba(255, 202, 0, 0.9);
+}
+
+.box-12 {
+  background: rgba(255, 202, 0, 0.9);
 }/*# sourceMappingURL=comm.css.map */
