@@ -89,3 +89,46 @@
   left: $l;
   right: $r;
 }
+
+// 피그마 사이즈 참고 
+// width 1440px 이하일 경우
+@media screen and (max-width: 1440px) {
+  body {
+    background-color: blue;
+  }
+}
+
+// width 1280px 이하일 경우 
+@media screen and (max-width: 1280px) {
+  body {
+    background-color: bisque;
+  }
+}
+
+// width 1024px 이하일 경우 / tablet *** 
+@media screen and (max-width: 1024px) {
+  body {
+    background-color: brown;
+  }
+}
+
+// width 744px 이하일 경우
+@media screen and (max-width: 744px) {
+  body {
+    background-color: gray;
+  }
+}
+
+// width 428px 이하일 경우 / mobile *** 
+@media screen and (max-width: 428px) {
+  body {
+    background-color: darkmagenta;
+  }
+}
+
+// width 360px 이하일 경우
+@media screen and (max-width: 360px) {
+  body {
+    background-color: darkorange;
+  }
+}

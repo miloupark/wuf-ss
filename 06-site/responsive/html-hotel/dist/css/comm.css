@@ -1,4 +1,34 @@
 @charset "UTF-8";
+@media screen and (max-width: 1440px) {
+  body {
+    background-color: blue;
+  }
+}
+@media screen and (max-width: 1280px) {
+  body {
+    background-color: bisque;
+  }
+}
+@media screen and (max-width: 1024px) {
+  body {
+    background-color: brown;
+  }
+}
+@media screen and (max-width: 744px) {
+  body {
+    background-color: gray;
+  }
+}
+@media screen and (max-width: 428px) {
+  body {
+    background-color: darkmagenta;
+  }
+}
+@media screen and (max-width: 360px) {
+  body {
+    background-color: darkorange;
+  }
+}
 /* reset */
 body,
 div,
@@ -26,7 +56,13 @@ th,
 td,
 input,
 select,
-button, header, main, footer, article {
+button,
+header,
+main,
+footer,
+article,
+section a,
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -111,18 +147,12 @@ input[type=search]::-webkit-search-cancel-button {
 /* mobile */
 body {
   background: #fff;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   font-family: "Poppins", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
   color: #222;
 }
 
-/* desktop */
-@media screen and (min-width: 1280px) {
-  body {
-    font-size: 16px;
-  }
-}
 /* color값은 디자인가이드에 맞게사용 */
 a {
   color: #333;
@@ -255,6 +285,11 @@ legend {
   content: "";
 }
 
+body {
+  background: url(../../2-1599이하.jpg) 0 0 no-repeat;
+  opacity: 0.4;
+}
+
 .slide-intro {
   transform: translateY(-70px);
 }
@@ -311,36 +346,60 @@ legend {
 }
 
 .wrap {
-  display: flex;
   position: relative;
+  display: flex;
   height: 100vh;
 }
 
 .header {
   display: flex;
   flex-direction: column;
-  width: 200px;
-  padding: 40px;
+  width: 190px;
+  padding: 0;
   background-color: #fff;
 }
-.header #logo a {
+
+.main {
+  width: calc(100% - 190px);
+  padding-top: 40px;
+  background-color: #999;
+}
+
+@media screen and (max-width: 1440px) {
+  .wrap {
+    display: block;
+  }
+  .header {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+  .header .inner {
+    display: flex;
+    justify-content: space-between;
+    height: 103px;
+  }
+  .main {
+    width: 100%;
+    padding-top: 0;
+  }
+}
+#logo a {
   display: block;
   width: 150px;
   height: 116px;
   margin: 0 auto;
-  background: url(../../images/logo1.png) 0/contain no-repeat;
+  background: url(../../images/logo1.png) 0 0/contain no-repeat;
   text-indent: -9999px;
 }
 
 #gnb {
   width: 100px;
-  margin: 184px auto 0;
+  margin: 70px auto 0;
 }
-#gnb .depth1 {
+#gnb .depth1 a {
   display: block;
-}
-#gnb .depth1 .depth1-li {
-  padding: 8px;
+  padding: 0 37px;
 }
 
 .main-spot {
@@ -358,7 +417,10 @@ legend {
 
 .contact a {
   position: relative;
-  font-size: 12px;
+  font-size: 0.75rem;
+}
+.contact a:first-child::before {
+  display: none;
 }
 .contact a::before {
   content: "";
@@ -370,14 +432,13 @@ legend {
   height: 10px;
   background-color: #333;
 }
-.contact a:first-child::before {
-  display: none;
-}
 
 .sns a {
   display: block;
   width: 31px;
   height: 29px;
+  padding: 0;
+  text-indent: -9999px;
 }
 .sns .facebook {
   background: url(../../images/sns3.png) 0 0 no-repeat;
@@ -392,18 +453,39 @@ legend {
 .main-util {
   position: absolute;
   top: 0;
-  left: 200px;
+  left: 190px;
   right: 0;
-  height: 40px;
+  height: 50px;
   background-color: #333;
 }
 
-.main {
-  width: calc(100% - 200px);
-  padding-top: 40px;
-  background-color: #999;
+@media screen and (max-width: 1440px) {
+  .logo {
+    padding: 30px 0 0 25px;
+  }
+  .logo a {
+    width: 250px;
+    height: 50px;
+    background: url(../../images/logo2.png) no-repeat 0 0;
+  }
+  #gnb {
+    width: auto;
+    margin: 0;
+  }
+  #gnb .depth1 {
+    display: flex;
+  }
+  #gnb .depth1 a {
+    height: 103px;
+    line-height: 103px;
+  }
+  .main-spot {
+    display: none;
+  }
+  .main-util {
+    position: static;
+  }
 }
-
 .grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -412,10 +494,11 @@ legend {
 }
 
 .box-g {
+  overflow: hidden;
   position: relative;
   height: 100%;
+  padding: 30px 20px;
   background-color: greenyellow;
-  overflow: hidden;
 }
 .box-g strong {
   text-transform: capitalize;
@@ -424,7 +507,7 @@ legend {
   position: absolute;
   bottom: -32px;
   right: -1px;
-  font-size: 100px;
+  font-size: 6.25rem;
   font-weight: 900;
   color: rgba(255, 255, 255, 0.7);
   letter-spacing: -3px;
@@ -437,25 +520,22 @@ legend {
 }
 
 .box-2 {
-  background-color: darkmagenta;
   grid-column: 4/span 2;
+  background-color: darkmagenta;
 }
 
 .box-3 {
-  background: rgba(255, 202, 0, 0.9);
+  background: #c6f6fa;
 }
 .box-3::after {
   content: "\f2f9";
   position: absolute;
-  top: 0;
   bottom: -39px;
   right: -9px;
-  font-size: 120px;
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 6.25rem;
   animation: fa-spin 2s infinite linear;
-  transform: rotate(360deg);
 }
 
 @keyframes fa-spin {
@@ -497,10 +577,15 @@ legend {
 }
 
 .box-11 {
-  grid-column: 4/span 2;
   background: rgba(255, 202, 0, 0.9);
 }
 
 .box-12 {
   background: rgba(255, 202, 0, 0.9);
+}
+
+@media screen and (max-width: 1440px) {
+  .grid {
+    height: calc(100vh - 153px);
+  }
 }/*# sourceMappingURL=comm.css.map */

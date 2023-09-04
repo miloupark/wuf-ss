@@ -28,7 +28,14 @@ th,
 td,
 input,
 select,
-button, header, main, footer, article {
+button, 
+header, 
+main, 
+footer, 
+article, 
+section
+a, 
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -132,19 +139,14 @@ input {
 /* mobile */
 body {
   background: #fff;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   font-family: "Poppins", "Noto Sans KR", "Malgun Gothic", "맑은 고딕",
     sans-serif;
   color: $txtDefault;
 }
 
-/* desktop */
-@media screen and (min-width: 1280px) {
-  body {
-    font-size: 16px;
-  }
-}
+
 
 /* color값은 디자인가이드에 맞게사용 */
 
@@ -291,7 +293,7 @@ legend {
   }
 }
 
-// body {
-//   background: url(/1-1599이상.jpg) 0 0 no-repeat;
-//   opacity: 0.4;
-// }
+body {
+  background: url(../../2-1599이하.jpg) 0 0 no-repeat;
+  opacity: 0.4;
+}
