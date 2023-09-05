@@ -41,12 +41,16 @@ $utilHeight: 40px;
     .inner {
       display: flex;
       justify-content: space-between;
-      height: 103px;
     }
   }
   .main {
     width: 100%;
     padding-top: 0;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .header {
+    display: none;
   }
 }
 
@@ -128,7 +132,7 @@ $utilHeight: 40px;
   top: 0;
   left: $hdWidth;
   right: 0;
-  height: 50px;
+  height: 46px;
   background-color: #333;
 }
 @media screen and (max-width: 1440px) {
@@ -209,6 +213,7 @@ $utilHeight: 40px;
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     font-size: 6.25rem;
+    overflow: hidden;
     animation: fa-spin 2s infinite linear;
   }
 }
@@ -254,5 +259,84 @@ $utilHeight: 40px;
 @media screen and (max-width: 1440px) {
   .grid {
     height: calc(100vh - 153px);
+  }
+}
+@media screen and (max-width: 1280px) {
+  .grid {
+    height: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    // columns 값은 5단에서 4단으로 변경됨
+    // row 값은 변하지 않으므로 작성하지 않아도 됨 
+  }
+  .box-g {
+    height: 233px;
+  }
+  .box-1 {
+    height: auto;
+    // 높이 값 233px 먹지 않도록 auto로 리셋해줌
+  }
+  .box-2 {
+    grid-column: auto;
+    // grid-column default value = auto 
+  }
+  .box-6 {
+    grid-column: 3 / span 2;
+  }
+  .box-7 {
+    grid-column: 1 / span 2;
+  }
+  .box-9 {
+    grid-column: auto;
+  }
+  .box-10 {
+    grid-column: 1 / span 2;
+  }
+}
+@media screen and (max-width: 428px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: transparent;
+    .inner {
+      display: block;
+    }
+  }
+  .link-logo {
+    width: 150px;
+    height: 116px;
+    padding-left: 0;
+    background: url(../../images/logo2.png) 0 0 no-repeat;
+  }
+  .gnb .depth1 {
+    display: block;
+    a {
+      width: 60%;
+      max-width: 300px;
+      height: 48px;
+      margin: 0 auto;
+      line-height: 48px;
+      margin-bottom: 10px;
+      background-color: red;
+      border-radius: 10px;
+      color: #fff 
+    }
+  }
+  .main-util {
+    display: none;
+  }
+  .grid {
+    display: block;
+  }
+  .box-g {
+    display: none;
+  }
+  .box-1 {
+    display: block;
+    width: 100%;
+    height: 100vh;
+
   }
 }

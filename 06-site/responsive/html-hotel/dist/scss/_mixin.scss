@@ -91,14 +91,14 @@
 }
 
 // 피그마 사이즈 참고 
-// width 1440px 이하일 경우
+// width 1440px 이하일 경우 /pc
 @media screen and (max-width: 1440px) {
   body {
     background-color: blue;
   }
 }
 
-// width 1280px 이하일 경우 
+// width 1280px 이하일 경우 / pc
 @media screen and (max-width: 1280px) {
   body {
     background-color: bisque;
@@ -112,7 +112,7 @@
   }
 }
 
-// width 744px 이하일 경우
+// width 744px 이하일 경우 / mobile *** 
 @media screen and (max-width: 744px) {
   body {
     background-color: gray;
