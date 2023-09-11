@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 선행</title>
+</head>
+<body>
+<!-- 2023.08.02 TUE -->
+    <h1>javascript</h1>
+    <h2>문자데이터</h2>
+    <script>
+        let myName = "hyebin";
+        let email = 'helenapark96@naver.com';
+        let hello = `안녕! ${myName}아`
+        // ${} = 변수 불러오기
+
+        console.log(myName);
+        console.log(email);
+        console.log(hello);
+    </script>
+
+    <h2>boolean data</h2>
+    <script>
+        let checked = true;
+        // "true"라고 넣으면 문자 데이터가 됨
+        let isShow = false
+        
+        console.log("checked : " + checked);
+        console.log(`isShow : ${isShow}`)
+    </script>
+
+    <h2>Undefined</h2>
+    <!-- 값이 할당되지 않음 -->
+    <script>
+        let Undef;
+            let object = { abc: 123 }
+        console.log(Undef);
+        console.log(object.abc)
+        console.log(object.xyz) 
+    </script>
+
+    <h2>null</h2>
+    <!-- 의도적으로 비워놓음 -->
+    <script>
+        let empty = null;
+
+        console.log(empty)
+    </script>
+
+    <h2>객체 데이터</h2>
+    <script>
+        let user = {
+            name: "hyebin",
+            age: 100,
+            isValid: true,
+        };
+
+        console.log(user);
+        // user의 전체 데이터
+        console.log(user.name);
+        // user의 이름 데이터
+        console.log(user.age);
+        // user의 나이 데이터
+        console.log(user.isValid);
+    </script>
+
+    <h2>배열데이터</h2>
+    <!-- 배열데이터는 [] 대괄호 사용, 순서는 0번부터 시작 -->
+    <script>
+        let fruits = ['apple', 'banana', 'cherry']
+
+        console.log(fruits)
+        console.log(fruits[0])
+        // 첫번째 과일 출력 원할 시
+        console.log(fruits[1])
+        // 두번째 과일 출력 원할 시
+        console.log(fruits[2])
+        // 세번째 과일 출력 원할 시
+    </script>
+
+    <h2>변수</h2>
+    <script>
+        let a = 5;
+        const b = 10;
+
+        console.log("a + b");
+        // ""넣음으로써 문자 데이터로 결과 출력됨
+        console.log(`b: ${b}`);
+        console.log(a + b);
+        console.log(a - b);
+        console.log(a * b);
+        console.log(a / b);
+        
+        // let 재할당 / 하단에 console다시 넣어줘야 결과 출력됨
+        a = 50;
+
+        console.log(a);
+        console.log(`a: ${a}`);
+        console.log(a + b);
+        console.log(a - b);
+        console.log(a * b);
+        console.log(a / b);
+
+        // const 재할당 불가
+        b = 100;
+        console.log(`b: ${b}`);
+    </script>
+
+
+<!-- 2023.08.02 WED -->
+    <h2>Function</h2>
+    <script>
+        // 함수 선언
+        function helloFunc() {
+            // 함수 실행코드
+            console.log(1 + 2);
+        }
+
+        // 함수 호출
+        helloFunc();
+
+
+        // 함수 내보내기
+        function returnFunc() {
+            return 1 + 2;
+        }
+
+        let returnA = returnFunc();
+
+        console.log(returnA);
+
+
+        // 함수의 재사용
+        function sum(c, d) { // c, d는 매개변수 (Parameters)
+            return c + d;
+        }
+
+        let newA = sum(10, 5); // 10, 5는 인수 (Arguments) 
+        let newB = sum(30, 50);
+
+        console.log(newA, newB);
+
+        // 기명(이름이 있는) 함수 - 상단에서 쓴 함수는 모두 기명 
+
+        // 익명 함수
+        let world = function () {
+            console.log('World')
+        }
+
+        world();
+        
+        </script>
+
+    <!-- 조건문 -->
+    <h2>조건문</h2>
+    <!-- ex) 시험 점수 -->
+    <script>
+        let sleep = true;
+        let have = false;
+
+        if (sleep) {
+            console.log("ㅜㅜ");
+        }
+        if (have) {
+            console.log("^_^");
+        }
+        // have는 false이기 때문에 출력 안됨
+
+        let math = true;
+        if (math) {
+            // 참일 경우
+            console.log("참 잘했어요.");
+        }else{
+            // 거짓일 경우
+            console.log("좀 더 노력하세요.");
+        }
+    </script>
+
+    <h2>요소 찾기</h2>
+    <!-- 모달창 -->
+    <div class="box">Box!!</div>
+    <script>
+        let boxEl = document.querySelector(".box")
+
+        boxEl.addEventListener("click", function () {
+            // 실행코드
+            console.log("Click");
+        });
+    </script>
+
+    <div class="box2">box2</div>
+    <script>
+        // html 요소 찾기/검색
+        let box2El = document.querySelector(".box2");
+        
+        box2El.classList.add("active");
+        let isContains = box2El.classList.contains("active");
+        console.log(isContains);
+
+        box2El.classList.remove("active");
+        console.log(box2El.classList.contains("active"));
+    </script>
+
+    <h2>forEach</h2>
+    <div class="box3">1</div>
+    <div class="box3">2</div>
+    <div class="box3">3</div>
+    <div class="box3">4</div>
+    <script>
+        let box3Els = document.querySelectorAll(".box3");
+        console.log(box3Els);
+
+        box3Els.forEach(function (box3El, index) {
+            // 실행함수
+            box3El.classList.add(`order-${index + 1}`);
+            console.log(index, box3El)
+        })
+    </script>
+
+    <h2>Getter, Setter</h2>
+    <div class="box4">1</div>
+    <div class="box4">2</div>
+    <div class="box4">3</div>
+    <div class="box4">4</div>
+    <script>
+        let box4El = document.querySelector(".box4");
+
+        // Getter, 값을 얻는 용도
+        console.log(box4El.textContent);
+
+        // Setter, 값을 지정하는 용도
+        box4El.textContent = "hyebin";
+        console.log(box4El.textContent);
+    </script>
+</body>
+</html>
