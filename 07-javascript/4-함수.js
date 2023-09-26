@@ -152,3 +152,22 @@ console.log(sum1(1,2)) /* 3 */
 console.log(sum2(1,2)) /* 3 */
 console.log(sum3(1,2)) /* 3 */
 console.log(sum4(1,2)) /* 3 */
+
+// 화살표 함수 예시
+const a = () => {}
+const b = x => {}
+// 매개변수가 1개 소괄호()생략가능
+const c = (x,y) => {}
+// 매개변수가 2개 이상인경우 소괄호()생략불가능
+const d = x => { return x + x }
+const e = x => x + x
+const f = x => {
+  console.log(x)
+  return x * x
+}
+
+const g = () => {return { a: 1 }}
+const h = () => ({ a: 1 })
+
+const i = () => { return [1,2]}
+const j = () => [1,2]
