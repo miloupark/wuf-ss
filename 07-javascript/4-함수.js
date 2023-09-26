@@ -127,3 +127,28 @@ const hello12 = () => {
 hello()
 hello11()
 hello12()
+
+
+// sum 함수
+function sum1(x,y) {
+  return x + y
+}
+
+// 표현식
+const sum2 = function (x,y) {
+  return x + y
+}
+
+// 화살표 함수
+const sum3 = (x,y) => { 
+  return x + y
+}
+
+// 화살표 함수 축약
+const sum4 = (x,y) => x + y
+ 
+console.log(sum1(1,2)) /* 3 */
+// 1은 x에, 2는 y에 할당 -> return으로 1 + 2 -> 3결과
+console.log(sum2(1,2)) /* 3 */
+console.log(sum3(1,2)) /* 3 */
+console.log(sum4(1,2)) /* 3 */
