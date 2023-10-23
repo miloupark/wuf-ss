@@ -171,3 +171,69 @@ const h = () => ({ a: 1 })
 
 const i = () => { return [1,2]}
 const j = () => [1,2]
+
+
+// 객체 구조 분해 할당
+const user1 = {
+  name: '가을',
+  age: 2,
+};
+
+function print(u){
+  const {name, age} = u;
+  return `${name}는 ${age}살 입니다.`;
+}
+
+console.log(print(user1));
+
+
+// 배열의 구조 분해 할당
+const animals1 = ['개', '고양이', '참새'];
+
+function print2([, b]) {
+  // const [, b] = arr;
+  return b;
+}
+  
+console.log(print2(animals1));
+
+
+// 나머지 매개변수
+function sum9(a, b, ...rest) {
+  console.log(a, b, rest)
+}
+
+console.log(sum9(1, 2));
+console.log(sum9(1, 2, 3, 4, 5, 6));
+
+
+// 화살표 함수
+// 기본 문법
+// const name = () => {};
+// x => {} /* 매개변수가 하나일 때 소괄호 생략 가능 */
+// (x, y) => {} /* 매개변수가 여러개일 때 소괄호 생략 불가능 */
+// x => {return x + x}
+// x => x + x /* 중괄호 생략 시 return문 생략가능 */
+// x => {
+//   console.log(x);
+//   return x * x;
+// } /* return 키워드로 시작하지 않는 경우는 중괄호를 생략할 수 없다. */
+
+const gg = () => {return {a : 1}}
+const ggg = () => ({a : 1}) /* 객체 반환 시 소괄호로 감싸준다. */
+
+const hh = () => {return [1,2]}
+const hhh = () => [1,2] /* 구분이 명확하기 때문에 소괄호로 감싸지 않아도 된당 */
+
+
+// 콜백 함수
+// 함수의 매개변수로 전달되는 함수
+const aa = callback => {
+  callback();
+  console.log('a');
+}
+const bb = () => {
+  console.log('b');
+}
+
+aa(bb);
