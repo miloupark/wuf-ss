@@ -237,3 +237,102 @@ const bb = () => {
 }
 
 aa(bb);
+
+
+// 매개변수 기본값
+function sum10(x,y) {
+  return x + y;
+}
+
+console.log(sum10(1, 3));
+
+
+// 콜백함수
+const cc = (c) => {
+  c();
+  console.log('cc');
+};
+const dd = () => {
+  console.log('dd');
+};
+
+cc(dd);
+
+
+// 콜백 함수 예시 1
+const sum11 = (a, b, c) => {
+  // setTimeout(() => {}, 1000)
+  setTimeout(() => {
+    c(a + b);
+    return;
+  }, 1000);
+};
+sum11(1, 3, (value) => {
+  console.log(value);
+});
+sum11(3, 5,(value) => {
+  console.log(value);
+});
+
+
+// 재귀함수
+const x = () => {
+  console.log('x');
+};
+
+x();
+
+let ii = 0;
+const xx = () => {
+    console.log('a');
+    ii++;
+    if (i < 4) {
+        xx();
+    };
+};
+
+const userA = { name: 'A', parent: null };
+const userB = { name: 'B', parent: userA };
+const userC = { name: 'C', parent: userB };
+const userD = { name: 'D', parent: userC };
+
+const getRootUser = (user) => {
+    if (user.parent) {
+        return getRootUser(user.parent); 
+    }
+    return user;
+};
+
+console.log(getRootUser(userD)); // { name: 'A', parent: null }
+
+
+// setTimeout 
+const hello13 = () => {
+  console.log('hello');
+};
+
+// const timeOut = setInterval(hello13, 3000);
+
+const h1El = document.querySelector('h1');
+h1El.addEventListener('click', () => {
+  console.log('click');
+  clearIntervals(timeOut);
+});
+
+
+// this
+// 일반 함수는 호출 위치에서 this 정의됨
+function user20 () {
+  this.first ='fall',
+  this.last = 'kim';
+  return{
+    firstName: 'winter',
+    lastName: 'Kim',
+    getFullName: () => {
+        // getFullName 메소드를 호출하면 (메소드(=객체 안에 들어가는 함수) 호출하려면 일반함수로!)
+        retrun`${this.firstName} ${this.lastName}`; // this는 obj를 가리킨다.
+    },
+  }
+}
+const u = user20();
+console.log(u.getFullName()); 
